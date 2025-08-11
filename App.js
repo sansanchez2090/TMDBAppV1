@@ -1,18 +1,10 @@
+/* eslint-disable prettier/prettier */
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
-import { getPopularMovies } from './lib/tbdm';
 import { StyleSheet,View} from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';  
 import { Main } from './components/Main';
 
 export default function App() {
-
-  const [movies, setMovies] = useState([]);
-  useEffect(() => {
-    getPopularMovies().then((movies) => {
-      setMovies(movies);
-    });
-  }, []);
 
   return (
     <SafeAreaProvider>
